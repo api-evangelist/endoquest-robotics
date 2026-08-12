@@ -1,17 +1,43 @@
 aid: endoquest-robotics
 name: EndoQuest Robotics
-description: 'EndoQuest Robotics is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  EndoQuest Robotics is a Houston, Texas medical device company — founded in 2017 and
+  operating as ColubrisMX until its June 2022 rebrand — developing what it calls the
+  world's first flexible endoluminal robotic surgical system. Its Endoluminal Surgical
+  (ELS) System pairs an ergonomic physician console (high-definition monitor, hand
+  controllers, foot pedals) with a mobile patient cart and positioning arm, driving two
+  6mm flexible robotic instruments and a 3.7mm high-definition robotic camera through the
+  EndoDrive, with up to seven degrees of freedom and additional channels for insufflation,
+  suction, irrigation and third-party accessories. The design targets scar-free
+  minimally invasive procedures inside the gastrointestinal tract — including appendectomy
+  and cholecystectomy — performed through natural orifices or a single transumbilical
+  incision. The company was accepted into the FDA's Safer Technologies Program in December
+  2023, received an investigational device exemption in December 2024, and began first
+  colorectal cases in its PARADIGM pivotal multicenter study in May 2025. The system is
+  not FDA-cleared and is not for commercial sale. EndoQuest sells surgical robotics
+  hardware, not software: it publishes no API, developer portal, SDK, or machine-readable
+  contract of any kind, and its nine-page marketing site carries no developer surface.
+image: https://endoquestrobotics.com/images/logo-header.svg
 url: https://raw.githubusercontent.com/api-evangelist/endoquest-robotics/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profile
+x-tier-reason: no-api-surface
 specificationVersion: '0.20'
 created: '2026-08-12'
 modified: '2026-08-12'
 tags:
 - Company
+- Medical Devices
+- Surgical Robotics
+- Robotics
+- Endoluminal Surgery
+- Gastroenterology
+- Minimally Invasive Surgery
+- Health Care
+- Medical Technology
+- Deep Tech
+- Texas
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +46,59 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
+  url: https://endoquestrobotics.com/
+- type: Product
+  url: https://endoquestrobotics.com/next-generation-robotic-surgery/
+- type: Blog
+  url: https://endoquestrobotics.com/latest-news/
+- type: PressReleases
+  url: https://endoquestrobotics.com/media/
+- type: Careers
+  url: https://endoquestrobotics.com/careers/
+- type: Contact
+  url: https://endoquestrobotics.com/contact/
+- type: Patents
+  url: https://endoquestrobotics.com/patent-notice/
+- type: TermsOfService
+  url: https://endoquestrobotics.com/terms-of-use/
+- type: PrivacyPolicy
+  url: https://endoquestrobotics.com/privacy-policy/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/endoquest
+- type: Twitter
+  url: https://x.com/endoquestrobot
+- type: Investors
   url: https://forgeglobal.com/endoquest-robotics_stock/
+- type: DomainSecurity
+  url: security/endoquest-robotics-domain-security.yml
+x-enrichment:
+  date: '2026-08-12'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    EndoQuest Robotics manufactures a pre-commercial surgical robot — console, patient
+    cart and 6mm flexible instruments — whose control software is embedded in the device
+    and never exposed, and endoquestrobotics.com is a nine-page marketing site whose own
+    sitemap.xml lists only home, contact, news, product, media, careers, patents, terms
+    and privacy, with no /developers, no /api, no GitHub organization, and no api./docs./
+    developer. subdomain resolving in DNS.
+  evidence:
+  - url: https://endoquestrobotics.com/sitemap.xml
+    status: 200
+  - url: https://endoquestrobotics.com/developers
+    status: 404
+  - url: https://endoquestrobotics.com/openapi.json
+    status: 404
+  - url: https://endoquestrobotics.com/llms.txt
+    status: 404
+  - url: https://endoquestrobotics.com/.well-known/agent-card.json
+    status: 404
+  - url: https://endoquestrobotics.com/.well-known/agent.json
+    status: 404
+  - url: https://api.github.com/orgs/endoquestrobotics
+    status: 404
+  checked: '2026-08-12'

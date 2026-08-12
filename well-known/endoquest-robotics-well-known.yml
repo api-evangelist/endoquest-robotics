@@ -1,0 +1,41 @@
+generated: '2026-08-12'
+method: probed
+source: live HTTP probes of the endoquestrobotics.com host
+host: https://endoquestrobotics.com
+note: >-
+  Every /.well-known/ path probed returned a genuine HTTP 404 served by the site's own
+  404 template — there is no discovery surface on this host. This file records that
+  absence as data. No WellKnown or SecurityTxt pointer is wired into apis.yml, because
+  no path returned a document: the pointer would assert a surface EndoQuest Robotics
+  does not serve. There is no api., docs., developer., portal., status. or trust.
+  subdomain in DNS for this domain, so there is no second host to probe.
+documents:
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/openid-configuration
+  status: 404
+- path: /.well-known/oauth-authorization-server
+  status: 404
+- path: /.well-known/oauth-protected-resource
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
+- path: /.well-known/agent-card.json
+  status: 404
+- path: /.well-known/agent.json
+  status: 404
+x-evidence:
+  fetched: '2026-08-12'
+  hosts_probed:
+  - endoquestrobotics.com
+  - www.endoquestrobotics.com
+  dns_checked:
+  - api.endoquestrobotics.com
+  - developer.endoquestrobotics.com
+  - docs.endoquestrobotics.com
+  - status.endoquestrobotics.com
+  - trust.endoquestrobotics.com
+  - portal.endoquestrobotics.com
+  dns_result: no A/CNAME records returned for any of the above
