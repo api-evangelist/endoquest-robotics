@@ -17,6 +17,17 @@ description: >-
   not FDA-cleared and is not for commercial sale. EndoQuest sells surgical robotics
   hardware, not software: it publishes no API, developer portal, SDK, or machine-readable
   contract of any kind, and its nine-page marketing site carries no developer surface.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://endoquestrobotics.com/images/logo-header.svg
 url: https://raw.githubusercontent.com/api-evangelist/endoquest-robotics/refs/heads/main/apis.yml
 x-type: company
